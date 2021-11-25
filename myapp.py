@@ -15,15 +15,17 @@ tickerData = yf.Ticker(tickerSymbol)
 # will provide Open High Low Close volume Dividends Stock Splits information
 tickerDf = tickerData.history(period='1d', start='2010-05-31',end='2021-11-24')
 
-st.write('''
+st.write("""
 ## Closing price of Google's Stock
-''')
+"""
+
+)
 
 st.line_chart(tickerDf.Close)
 
-st.write('''
+st.write("""
 ## Volume of Google's Stock
-''')
+""")
 st.line_chart(tickerDf.Volume)
 
 
